@@ -1,0 +1,26 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null" >
+    
+  <Button 
+    android:id="@+id/button1" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:drawableBottom="@drawable/folder"/>
+  
+  <TextView
+     android:id="@+id/name1"
+ 	 android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="3dp"
+     android:layout_marginRight="3dp"
+     android:gravity="center"
+     android:textColor="@color/black"
+     android:background="@drawable/back"
+     android:layout_below="@+id/button1"/>
+  
+  
+  </RelativeLayout>

@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Sat Jul 21 19:02:50 EDT 2018
+1.base=/Users/paul/Projects/SwipeTab/build/intermediates/assets/debug
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=ASSET
+0.path=classes.dex
+0.set=DEX
+0.base=/Users/paul/Projects/SwipeTab/build/intermediates/transforms/dexMerger/debug/34
+1.path=font/Prototype.ttf

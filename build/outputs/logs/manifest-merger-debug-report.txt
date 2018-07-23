@@ -1,0 +1,187 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:2:1-99:12
+INJECTED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:2:1-99:12
+INJECTED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:2:1-99:12
+INJECTED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:2:1-99:12
+INJECTED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:2:1-99:12
+	package
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:3:5-36
+	android:versionName
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:5:5-47
+		INJECTED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml
+		INJECTED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:4:5-31
+		INJECTED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml
+		INJECTED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml
+uses-sdk
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:7:5-44
+	android:minSdkVersion
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:7:15-41
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:10:22-63
+uses-permission#android.permission.INTERNET
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:12:5-73
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:12:22-70
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:13:22-77
+uses-permission#com.android.launcher.permission.INSTALL_SHORTCUT
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:14:5-88
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:14:22-85
+application
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:16:5-97:19
+	android:label
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:19:9-41
+	android:killAfterRestore
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:20:41-72
+	android:allowTaskReparenting
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:20:73-108
+	android:icon
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:18:9-45
+	android:allowBackup
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:17:9-35
+	android:theme
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:20:9-40
+activity#net.ossfree.launcher4.MainActivity
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:22:9-32:20
+	android:screenOrientation
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:26:13-49
+	android:label
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:24:13-45
+	android:launchMode
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:25:13-43
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:23:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:27:13-31:29
+action#android.intent.action.MAIN
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:30:27-74
+activity#net.ossfree.launcher4.EditActivity
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:34:9-39:20
+	android:screenOrientation
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:37:13-49
+	android:label
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:36:13-56
+	android:theme
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:38:13-70
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:35:13-41
+activity#net.ossfree.launcher4.AppsWindow
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:41:9-46:20
+	android:screenOrientation
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:44:13-49
+	android:label
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:43:13-48
+	android:theme
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:45:13-73
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:42:13-39
+activity#net.ossfree.launcher4.DocWindow
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:48:9-53:20
+	android:screenOrientation
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:51:13-49
+	android:label
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:50:13-48
+	android:theme
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:52:13-73
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:49:13-38
+activity#net.ossfree.launcher4.TabsList
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:55:9-63:20
+	android:screenOrientation
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:58:13-49
+	android:label
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:57:13-59
+	android:theme
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:59:13-73
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:56:13-37
+intent-filter#action:name:android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:60:13-62:29
+action#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:61:17-87
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:61:25-84
+receiver#net.ossfree.launcher4.UpdateManager
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:65:9-79:20
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:65:19-48
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:66:13-68:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:67:17-79
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:67:25-76
+intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_CHANGED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:69:13-75:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:70:17-78
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:70:25-75
+action#android.intent.action.PACKAGE_CHANGED
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:71:17-80
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:71:25-77
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:72:17-80
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:72:25-77
+data
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:74:17-50
+	android:scheme
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:74:23-47
+intent-filter#action:name:net.ossfree.launcher4.LaunchApp
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:76:13-78:29
+action#net.ossfree.launcher4.LaunchApp
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:77:17-74
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:77:25-71
+receiver#net.ossfree.launcher4.WidgetProvider
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:80:9-91:20
+	android:label
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:83:13-57
+	android:icon
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:82:13-49
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:81:13-43
+intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:84:13-86:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:85:17-84
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:85:25-81
+meta-data#android.appwidget.provider
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:88:13-90:55
+	android:resource
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:90:17-52
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:89:17-58
+service#net.ossfree.launcher4.AppsService
+ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:93:9-95:38
+	android:enabled
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:95:13-35
+	android:name
+		ADDED from /Users/paul/Projects/SwipeTab/AndroidManifest.xml:94:13-40

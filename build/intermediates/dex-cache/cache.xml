@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\paul\Projects\SwipeTab\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="956b8d2a2f60136d1190e05233557de19ab4043c">
+        <dex dex="C:\Users\paul\Projects\SwipeTab\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_932159a7e74534e6433b0d6135a01124018d3e3b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\paul\Projects\SwipeTab\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="C:\Users\paul\Projects\SwipeTab\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_8200d48ccaa7efe1d95c4c1efeaf3a11eea5213e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\paul\Projects\SwipeTab\libs\android-support-v4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5896b0a4e377ac4242eb2bc785220c1c4fc052f4">
+        <dex dex="C:\Users\paul\Projects\SwipeTab\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_c39be03dcf553243e2f2c54e5163712c72d88755\classes.dex" />
+    </item>
+
+</items>
