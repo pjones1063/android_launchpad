@@ -30,7 +30,10 @@ public class TabHolder {
 			break;
 		case AppsService.DOCID:
 			tv.setTextColor(r.getColor(R.color.cornsilk));
-			break;	
+			break;
+		case AppsService.SDID:
+				tv.setTextColor(r.getColor(R.color.cornsilk));
+				break;
 		default:
 			tv.setTextColor(r.getColor(R.color.antiquewhite));
 			break;

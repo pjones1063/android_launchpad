@@ -4,5 +4,5 @@
       android:versionCode="1801"
       android:versionName="25-2017.04.12.Gimley"
       split="lib_resources_apk">
-	<uses-sdk android:minSdkVersion="22"/>
+	<uses-sdk android:minSdkVersion="23"/>
 </manifest>

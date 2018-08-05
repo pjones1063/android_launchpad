@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="net.ossfree.launcher4"
-      android:versionCode="1801"
-      android:versionName="25-2017.04.12.Gimley"
-      split="lib_slice_3_apk">
-</manifest>

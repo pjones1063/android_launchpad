@@ -29,7 +29,7 @@ import net.ossfree.launcher4.Logger.LLg;
 import net.ossfree.launcher4.Structures.DocInfo;
 import net.ossfree.launcher4.Structures.TabPage;
 
-@SuppressLint("DefaultLocale")
+@SuppressLint({"DefaultLocale", "ValidFragment"})
 public class DocList<E> extends AppsList   {
 
 	protected DocAdapter docAdapter = null;
@@ -42,8 +42,11 @@ public class DocList<E> extends AppsList   {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		docList = AppsService.getDocuments(Environment.getExternalStorageDirectory().toString());
-		
+		if(tabPage.getID() == AppsService.SDID)
+			docList = AppsService.getDocuments(MainActivity.getSDPath());
+	    else
+			docList = AppsService.getDocuments(Environment.getExternalStorageDirectory().toString());
+
 		if (MainActivity.isGridviewdoc())
 			return buildGrid(inflater, container);
 		else

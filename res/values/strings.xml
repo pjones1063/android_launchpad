@@ -9,6 +9,7 @@
     <string name="action_renTab">Rename Launch Tab</string>
     <string name="action_rearrange">Arrange Launch Tabs </string>
     <string name="action_tabName">Launch Tab Name: </string>
+    <string name="action_sdPath">SD Path </string>
     <string name="action_addFolder">Add Launch Folder</string>
     <string name="action_delFolder">Delete Launch Folder</string>
     <string name="action_editFolder">Select Apps for this Launch Folder</string>
@@ -49,7 +50,8 @@
 	<string name="tab_AllApps">-All My Apps </string>
 	<string name="tab_FrqApps">-Frequent Apps </string>
 	<string name="tab_NewApps">-New Apps </string>
-	<string name="tab_MyDocs">-My SD Card </string>
+	<string name="tab_MyDocs">-My Phone </string>
+    <string name="tab_MySD">-My SD Card </string>
 	<string name="tab_SelApps">Select Apps For:</string> 
 	<string name="tab_Rename">Rename:</string>
 	<string name="tab_Add">Add Folder To:</string>
@@ -83,5 +85,6 @@
     <string name="service_allapps">All Apps</string>
     
     <string name="title_activity_folder_list">FolderList</string>
-    
+    <string name="tab_DeviceStatus">-Device Status</string>
+
 </resources>

@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/paul/Projects/SwipeTab/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+            "outputFile": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "/Users/paul/Projects/SwipeTab/res/values-v11/styles.xml",
+                    "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\values-v11\\styles.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",
-                        "startOffsets": "182",
+                        "startOffsets": "183",
                         "endLines": "8",
                         "endColumns": "12",
-                        "endOffsets": "310"
+                        "endOffsets": "311"
                     },
                     "to": {
                         "startLines": "2",

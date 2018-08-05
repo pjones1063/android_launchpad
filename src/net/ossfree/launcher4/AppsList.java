@@ -4,20 +4,16 @@ package net.ossfree.launcher4;
 import android.annotation.SuppressLint;
 import android.app.WallpaperManager;
 import android.content.ActivityNotFoundException;
-import android.content.ClipData;
-import android.content.ClipDescription;
-import android.content.Context;
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.os.Vibrator;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.DragShadowBuilder;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -33,8 +29,8 @@ import net.ossfree.launcher4.Adapters.AppsAdapter;
 import net.ossfree.launcher4.Structures.ItemInfo;
 import net.ossfree.launcher4.Structures.TabPage;
 import net.ossfree.launcher4.ViewHolders.AppsHolder;
-                                                                                                                                                                                                                                   
-@SuppressLint("DefaultLocale")
+
+@SuppressLint({"DefaultLocale", "ValidFragment"})
 public class AppsList extends Fragment   {
 
 	protected AppsAdapter appsAdapter = null;
@@ -62,7 +58,7 @@ public class AppsList extends Fragment   {
 		
 		final View apps = inflater.inflate(R.layout.apps_grid, container, false);				
 		final GridView bigList = (GridView) apps.findViewById(R.id.appsIndex);
-		appsAdapter  = new AppsAdapter(getActivity().getApplicationContext(), R.layout.apps_grid_row, tabPage);		
+		appsAdapter  = new AppsAdapter(getActivity().getApplicationContext(), R.layout.apps_grid_row, tabPage);
 		final WallpaperManager wallpaperManager = WallpaperManager.getInstance(getActivity());
 		final Drawable wp= wallpaperManager.getDrawable();
 		bigList.setBackground(wp);
@@ -92,10 +88,7 @@ public class AppsList extends Fragment   {
 		return buildAlphaList(inflater, apps);
 		
 	}
-	
-	
-   
-	
+
 	private View buildList(LayoutInflater inflater, ViewGroup container) {
 		final View apps = inflater.inflate(R.layout.apps_list, container, false);
 		appsAdapter  = new AppsAdapter(getActivity().getApplicationContext(), R.layout.apps_list_row, tabPage);
@@ -107,7 +100,9 @@ public class AppsList extends Fragment   {
 		bigList.setOnLongClickListener(new OnLongClickListener() {
 			public boolean onLongClick(View v) {
 				if(tabPage.getID() == AppsService.ALLID  || tabPage.getID() == AppsService.FRQID  
-						|| tabPage.getID() == AppsService.NEWID || tabPage.getID() == AppsService.DOCID) {
+						|| tabPage.getID() == AppsService.NEWID
+						|| tabPage.getID() == AppsService.DOCID
+						|| tabPage.getID() == AppsService.SDID) {
 					
 				} else {
 					((MainActivity)getActivity()).buildTabOptions();
@@ -144,7 +139,6 @@ public class AppsList extends Fragment   {
 	
 	
 	private View  buildAlphaList(LayoutInflater inflater, View apps ) {
-		
  	   sideList = (ListView) apps.findViewById(R.id.sideIndex);
 	   ala = new AlphaAdapter(getActivity(), R.layout.side_row);
 	   sideList.setAdapter(ala);
@@ -170,7 +164,9 @@ public class AppsList extends Fragment   {
 
 	   final ImageView edit = (ImageView) apps.findViewById(R.id.edt);
 	   if(tabPage.getID() == AppsService.ALLID  || tabPage.getID() == AppsService.FRQID  
-			       || tabPage.getID() == AppsService.NEWID || tabPage.getID() == AppsService.DOCID) {
+			       || tabPage.getID() == AppsService.NEWID
+			       || tabPage.getID() == AppsService.DOCID
+			       || tabPage.getID() == AppsService.SDID) {
 		   edit.setImageResource(R.drawable.ic_add_white_48dp);
 		   edit.setOnClickListener(new View.OnClickListener() {
 			   @Override
@@ -212,6 +208,7 @@ public class AppsList extends Fragment   {
         startActivityForResult(
                 new Intent(((MainActivity)getActivity()), TabsList.class)
                         .putExtra(AppsService.DROPPER, true)
+						.putExtra(AppsService.TARGET, tabPage.getTab())
                         .putExtra(getString(R.string.action_APPINFO), ((AppsHolder)view.getTag()).ai.appPackage), 0);
     }
 

@@ -24,6 +24,7 @@
        <item name="android:minHeight">35dp</item>
     </style>
 
+    <!--
       <style name="line2" >
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">1dp</item>          
@@ -32,8 +33,123 @@
         <item name="android:layout_marginTop">2dp</item>
         <item name="android:background">@color/slategray</item>
      </style>
+     -->
 
- 
+    <style name="pbBar3" parent="@android:style/Widget.Holo.Light.ProgressBar.Small">
+        <item name="android:layout_width">22dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:progressDrawable">@drawable/ic_launcher</item>
+        <item name="android:indeterminate">true</item>
+    </style>
+
+    <style name="wPbBar1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="wPbBar2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+
+    </style>
+
+    <style name="txBoxH" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textColor">@color/snow</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="txBoxC" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- item name="android:layout_marginLeft">2dp</item -->
+        <item name="android:gravity">right</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textColor">@color/snow</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="txBoxD" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">@color/snow</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="txBox1" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textColor">@color/snow</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="txBox2" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textColor">@color/antiquewhite</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="txBox3" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textColor">@color/snow</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="line1" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:background">@color/lightsteelblue</item>
+    </style>
+
+    <style name="line2" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:background">@color/slategray</item>
+    </style>
+
+    <style name="line3" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
 
     <color name="white">#FFFFFF</color>
     <color name="ivory">#FFFFF0</color>

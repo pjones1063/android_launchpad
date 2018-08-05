@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SwipeTab.iml" filepath="$PROJECT_DIR$/SwipeTab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android_launchpad.iml" filepath="$PROJECT_DIR$/android_launchpad.iml" />
     </modules>
   </component>
 </project>

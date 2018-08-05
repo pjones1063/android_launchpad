@@ -3,9 +3,7 @@
     package="net.ossfree.launcher4"
     android:versionCode="1801"
     android:versionName="25-2017.04.12.Gimley" >
-
-    <uses-sdk android:minSdkVersion="22" />
-      
+    <uses-sdk android:minSdkVersion="23" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />

@@ -1,8 +1,5 @@
 package net.ossfree.launcher4;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -40,9 +37,9 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import net.ossfree.launcher4.Adapters.DrawerAdapter;
 import net.ossfree.launcher4.Adapters.IconAdapter;
-import net.ossfree.launcher4.Adapters.TabAdapter;
 import net.ossfree.launcher4.Adapters.TabPagerAdapter;
 import net.ossfree.launcher4.Logger.LLg;
 import net.ossfree.launcher4.PageTransitions.ReaderViewPagerTransformer;
@@ -50,6 +47,9 @@ import net.ossfree.launcher4.PageTransitions.ReaderViewPagerTransformer.Transfor
 import net.ossfree.launcher4.Structures.ItemInfo;
 import net.ossfree.launcher4.Structures.TabItem;
 import net.ossfree.launcher4.Structures.TabPage;
+
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 
 
 @SuppressWarnings("deprecation")
@@ -69,6 +69,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
 	private static int sortview = AppsService.ALPHASORT;
 	private static int pageview = AppsService.DEPTHOVER;
 	private boolean fireresult = false;
+    private static String sd_path = "/storage/CC66-6F37";
 	 	
     public  MainActivity(){}
 
@@ -174,7 +175,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
 	}
 
 	public static TabPage getMainTab(){
-		if(actBar != null) return (TabPage) actBar.getTabAt(0).getTag(); 		
+        if (actBar != null) return (TabPage) actBar.getTabAt(1).getTag();
 		return null;
 	}
 
@@ -217,9 +218,8 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     	case AppsService.SLIDEOVER:
     		tabPager.setPageTransformer(true, new ReaderViewPagerTransformer(TransformType.SLIDE_OVER));
     		break;
-    	default:	
-    		tabPager.setPageTransformer(true, new ReaderViewPagerTransformer(TransformType.DEPTH));		
-
+            default:
+                tabPager.setPageTransformer(true, new ReaderViewPagerTransformer(TransformType.DEPTH));
     	} 		
 
     	int ct = AppsService.currentTab;
@@ -235,39 +235,44 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     	sb.add(new TabItem(getString(R.string.action_settings), getResources().getDrawable(R.drawable.im64_settings),  AppsService.OTHID));
     	sb.add(new TabItem(getString(R.string.action_addTab),   getResources().getDrawable(R.drawable.im64_add), AppsService.OTHID));
 
-    	for(TabPage tp : AppsService.pagelist)	{
-    		if(! tp.isFolder()) {
-    			View tb = inflater.inflate(R.layout.tab_row, null);				
-    			TextView tbr = (TextView) tb.findViewById(R.id.tbr);
-    			tbr.setTypeface(Typeface.createFromAsset(getAssets(),"font/Prototype.ttf"));
-    			switch (tp.getID()) {
-				case AppsService.ALLID:
-					tbr.setTextColor(getResources().getColor(R.color.aliceblue));
-					break;
-				case AppsService.FRQID:
-					tbr.setTextColor(getResources().getColor(R.color.aquamarine));
-					break;
-				case AppsService.NEWID:
-					tbr.setTextColor(getResources().getColor(R.color.lightcoral));
-					break;
-				case AppsService.DOCID:
-					tbr.setTextColor(getResources().getColor(R.color.cornflowerblue));
-					break;
-					
-				default:
-					tbr.setTextColor(getResources().getColor(R.color.antiquewhite));
-					break;
-				}	
-    			tbr.setText(tp.getTab());	
-    			final Tab tab = actBar.newTab();
-    			tab.setText(tp.getTab())
-    			   .setTabListener(this)
-    			   .setCustomView(tb)
-    			   .setTag(tp);
-     			actBar.addTab(tab);   			
-    		}
-    		
-    		if(tp != null && tp.getTab() != null ){
+        for (TabPage tp : AppsService.pagelist) {
+            if (!tp.isFolder()) {
+                View tb = inflater.inflate(R.layout.tab_row, null);
+                TextView tbr = (TextView) tb.findViewById(R.id.tbr);
+                tbr.setTypeface(Typeface.createFromAsset(getAssets(), "font/Prototype.ttf"));
+                switch (tp.getID()) {
+                    case AppsService.STATID:
+                        tbr.setTextColor(getResources().getColor(R.color.beige));
+                        break;
+                    case AppsService.ALLID:
+                        tbr.setTextColor(getResources().getColor(R.color.aliceblue));
+                        break;
+                    case AppsService.FRQID:
+                        tbr.setTextColor(getResources().getColor(R.color.aquamarine));
+                        break;
+                    case AppsService.NEWID:
+                        tbr.setTextColor(getResources().getColor(R.color.lightcoral));
+                        break;
+                    case AppsService.DOCID:
+                        tbr.setTextColor(getResources().getColor(R.color.cornflowerblue));
+                        break;
+                    case AppsService.SDID:
+                        tbr.setTextColor(getResources().getColor(R.color.cornflowerblue));
+                        break;
+                    default:
+                        tbr.setTextColor(getResources().getColor(R.color.antiquewhite));
+                        break;
+                }
+                tbr.setText(tp.getTab());
+                final Tab tab = actBar.newTab();
+                tab.setText(tp.getTab())
+                        .setTabListener(this)
+                        .setCustomView(tb)
+                        .setTag(tp);
+                actBar.addTab(tab);
+            }
+
+            if (tp != null && tp.getTab() != null) {
     		  String s = tp.getTab().trim();
 			   sb.add(new TabItem(s, getResources().getDrawable(AppsService.getFolderIcon(s)),tp.getID()));
     		}
@@ -298,7 +303,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
         			   break;    		
         		   default:
         			   if(!showFolder(AppsService.pagelist.get(position-2)))  
-        				   positionTab(AppsService.pagelist.get(position-2));
+        				    positionTab(AppsService.pagelist.get(position-2));
         			   break;
         		   }
     		}
@@ -312,9 +317,6 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     	tabPager.setVisibility(View.VISIBLE);
  
     }
-
- 
-    
   
     public void clearSearch() {
     	if(srchView != null) {
@@ -493,7 +495,8 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     public static  boolean isGridviewdoc() { return gridviewdoc; }
     public static  boolean isTextview() { return textview; }
     public static  int getSortView() { return sortview; }
-    
+    public static String getSDPath() {return sd_path;}
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {  	        
     	positionTab(AppsService.currentTab); 
@@ -685,8 +688,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
 				buildAppsView();
         	}
         	return true;
-        	
-        	
+
         case R.id.action_alphSort:
         	if(getSortView() != AppsService.ALPHASORT) {
         		setSortView(AppsService.ALPHASORT);
@@ -737,7 +739,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
         	return true;
         	
         case R.id.action_clearfreqs:	
-        	showAlertDialog(
+        	 showAlertDialog(
                 new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK) 
               	   .setMessage(getString(R.string.doprogress5))
               	   .setIcon(android.R.drawable.ic_dialog_alert)
@@ -748,8 +750,23 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
               	    }}).setNegativeButton(android.R.string.no, null));
         
         	return true;
-        	
-        case R.id.action_catallapps:
+
+         case R.id.action_sdpath:
+             final EditText input = new EditText(this);
+             input.setText(sd_path);
+             showAlertDialog(
+                   new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
+                      .setMessage("SD Patth")
+                       .setIcon(android.R.drawable.ic_dialog_alert)
+                       .setView(input)
+                       .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                               public void onClick(DialogInterface dialog, int whichButton) {
+                                       setSDPath(input.getText().toString());
+                                    }}).setNegativeButton(android.R.string.no, null));
+
+                return true;
+
+            case R.id.action_catallapps:
         	showAlertDialog(
           	  new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
         	   .setMessage(getString(R.string.doprogress3))
@@ -791,7 +808,8 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     	gridviewdoc = sp.getBoolean(AppsService.GRIDMODEDOC, false);
     	textview = sp.getBoolean(AppsService.TEXTMODE, true);
     	sortview = sp.getInt(AppsService.SORTMODE,AppsService.ALPHASORT);
-    	pageview = sp.getInt(AppsService.PAGEMODE, AppsService.DEPTHOVER); 
+    	pageview = sp.getInt(AppsService.PAGEMODE, AppsService.DEPTHOVER);
+    	sd_path = sp.getString(AppsService.SDPATH, sd_path);
         buildAppsView(); 
 		final SharedPreferences.Editor ed = sp.edit();
 		ed.putBoolean(AppsService.FIRSTRUN, false);
@@ -839,8 +857,8 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     	editor.putBoolean(AppsService.TEXTMODE,    isTextview());
     	editor.putInt(AppsService.SORTMODE,        getSortView());
      	editor.putInt(AppsService.PAGEMODE,        getPageview());
+        editor.putString(AppsService.SDPATH,       getSDPath());
     	editor.commit();
-    	
     }
 	
 	
@@ -884,6 +902,11 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
 		MainActivity.pageview = pv;
 	    saveSharedPreferences();
 	}
+
+    public void setSDPath(String sd) {
+        MainActivity.sd_path = sd;
+        saveSharedPreferences();
+    }
 
 	protected void showAllView(String filter,Parcelable state ) {
     	if(filter != null && filter.length() > 0 ) positionTab(0);

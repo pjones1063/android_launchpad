@@ -31,8 +31,9 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
 	public void addTabs(List<TabPage> tabPages) {
 		totalPages = 0;
 		for(TabPage tp : tabPages)	  
-		  if(tp.getID() == AppsService.DOCID) pages.put(totalPages++, new DocList<Object>(tp));	
-		  else if(!tp.isFolder())             pages.put(totalPages++, new AppsList(tp));
+		  if(tp.getID() == AppsService.DOCID)    pages.put(totalPages++, new DocList<Object>(tp));
+		  else if(tp.getID() == AppsService.SDID)   pages.put(totalPages++, new DocList<Object>(tp));
+ 		  else if(!tp.isFolder())               pages.put(totalPages++, new AppsList(tp));
     }
 	
 }

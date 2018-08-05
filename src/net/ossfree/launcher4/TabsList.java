@@ -39,6 +39,7 @@ public class TabsList extends Activity implements OnDragListener, OnItemClickLis
 	
 	private int mAppWidgetId;
 	private ListView list;
+	private String target;
 	private boolean lister=false, dropper =false;
 	private TabAdapter tabAdapter;
 	private String appid = "";
@@ -54,6 +55,7 @@ public class TabsList extends Activity implements OnDragListener, OnItemClickLis
 			mAppWidgetId = extras.getInt(EXTRA_APPWIDGET_ID, INVALID_APPWIDGET_ID);
 			lister = extras.getBoolean(AppsService.LISTER, false);
 			dropper = extras.getBoolean(AppsService.DROPPER, false);
+			target = extras.getString(AppsService.TARGET, "");
 			appid = extras.getString(getString(R.string.action_APPINFO), "");
 		}	
 		
@@ -147,8 +149,7 @@ public class TabsList extends Activity implements OnDragListener, OnItemClickLis
 				break;
 
 			case 2:
-				tabItem = ((TabItem) list.getAdapter().getItem(position)).tabName;
-				tabPage = AppsService.getPage(tabItem);
+				tabPage = AppsService.getPage(target);
 				if(tabPage.getID() != AppsService.ALLID)    tabPage.removeAppByPackage(appid);
 				if(tabPage.getID() == AppsService.FRQID)    AppsService.removeFreqApp(appid);
 				if(appid.startsWith(AppsService.FOLDER)) {
@@ -225,7 +226,8 @@ public class TabsList extends Activity implements OnDragListener, OnItemClickLis
 			String to =((TabItem) list.getAdapter().getItem(ai)).tabName;
 			LLg.d(from + ":" + to);
 			if(!from.equals(AppsService.tab_AllApps) && !from.equals(AppsService.tab_FrqApps) 
-	  		    && !from.equals(AppsService.tab_NewApps) && !from.equals(AppsService.tab_MyDocs)  ) {
+	  		    && !from.equals(AppsService.tab_NewApps)
+                    && !from.equals(AppsService.tab_MyDocs) && !from.equals(AppsService.tab_MySD) ) {
 				AppsService.movePage(getApplicationContext(),from, to);
 				setResult(RESULT_OK);
 			}

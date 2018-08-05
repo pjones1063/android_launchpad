@@ -47,11 +47,14 @@ public class AppsService extends Service {
 	public  static final String GRIDMODEDOC    = "net.ossfree.launcher4.GridModeDoc.";
 	public  static final String TEXTMODE       = "net.ossfree.launcher4.TextMode.";
 	public  static final String PAGEMODE       = "net.ossfree.launcher4.PageMode.";	
-	public  static final String SORTMODE       = "net.ossfree.launcher4.SortMode.";	
-	public  static final String LNCHAPP		   = "net.ossfree.launcher4.LaunchApp.";	
+	public  static final String SORTMODE       = "net.ossfree.launcher4.SortMode.";
+    public  static final String SDPATH         = "net.ossfree.launcher4.SDFilePath.";
+    public  static final String LNCHAPP		   = "net.ossfree.launcher4.LaunchApp.";
 	public  static final String LISTER		   = "net.ossfree.launcher4.ListerApp.";
 	public  static final String DROPPER		   = "net.ossfree.launcher4.DropperApp.";
 	public  static final String FIRSTRUN	   = "net.ossfree.launcher4.FirstRun.";
+	public  static final String TARGET   	   = "net.ossfree.launcher4.TargetTab.";
+
 		
 	public static final int TABEXACT  = 1963;
 	public static final int FLOWOVER  = 10;
@@ -61,11 +64,13 @@ public class AppsService extends Service {
 	public static final int ALPHASORT = 110;
 	public static final int DATESORT  = 120;
 	public static final int FREQSORT  = 130;
-	public static final int ALLID     = 196310;
+  	public static final int ALLID     = 196310;
 	public static final int FRQID     = 196320;
 	public static final int NEWID     = 196330;
 	public static final int DOCID     = 196340;
+	public static final int SDID      = 196345;
 	public static final int OTHID     = 196350;
+    public static final int STATID    = 196360;
 
 	private static boolean ongoing = false;	
 	public  static int currentTab = 0;	
@@ -73,10 +78,13 @@ public class AppsService extends Service {
 	public  static List<PackageInfo> freqList = null;
 	public  static List<TabPage>     pagelist = null;
 	public  static String tab_MyApps  = null;
+    public  static String tab_Stat    = null;
 	public  static String tab_AllApps = null;
 	public  static String tab_FrqApps = null;
 	public  static String tab_NewApps = null;		
-	public  static String tab_MyDocs = null;
+	public  static String tab_MyDocs  = null;
+	public  static String tab_MySD    = null;
+
  
 	public static ItemInfo getAppInfo(PackageInfo pi){
 		if(applist == null || pi == null) return null;				
@@ -132,6 +140,7 @@ public class AppsService extends Service {
 	
  
 	public static void addFreqApp(String packName){
+        LLg.i("addFreqApp:"+packName);
 		if(freqList == null) freqList = new ArrayList<PackageInfo>();
 		int p = freqList.indexOf(new PackageInfo(packName));
 		if(p > -1)  freqList.get(p).appUsedCount++;
@@ -139,6 +148,7 @@ public class AppsService extends Service {
 	}
 
 	public static void removeFreqApp(String packName) {
+        LLg.i("removeFreqApp:"+packName);
 		if(freqList == null) return;		
 		int p = freqList.indexOf(new PackageInfo(packName));
 		if(p > -1)  freqList.remove(p);				
@@ -162,13 +172,12 @@ public class AppsService extends Service {
 					applist.get(p).appName = newName;
 					applist.get(p).appPackage = FOLDER + newName;
 					applist.get(p).appIcon = context.getResources().getDrawable(R.drawable.im64_folder);
-
 				}
 			} while(p > -1);
-		}
+	     }
 
 		for(TabPage tp : AppsService.pagelist)	{
-			if(tp.isFolder() && tp.getTab().equals(oldName)) tp.setTab(newName);			
+			if(tp.isFolder() && tp.getTab().equals(oldName)) tp.setTab(newName);
 			if(tp.hasApp(FOLDER + oldName)) {
 				tp.delApp(FOLDER + oldName);
 				tp.addApp(FOLDER + newName);
@@ -179,6 +188,7 @@ public class AppsService extends Service {
 	
 	
 	public static void deleteFolder(Context context, String folderName) {
+        LLg.i("deleteFolder:"+folderName);
 		deleteFolder(folderName);
 		saveLayout(context);
 	}
@@ -212,7 +222,7 @@ public class AppsService extends Service {
 	}
 	
 	public static void clearFreqTab(Context context) {
-		LLg.i("saveLayout");
+		LLg.i("clearFreqTab");
 		freqList.clear();
 		saveLayout(context);
  	}
@@ -241,7 +251,6 @@ public class AppsService extends Service {
 	
 	public static List<TabPage> loadLayout(Context context) {	
 		LLg.i("loadLayout");
-		
 		pagelist = new ArrayList<TabPage>();		
 		ObjectInputStream in = null;
 		try {
@@ -260,31 +269,32 @@ public class AppsService extends Service {
 		} 
 		
 		if(pagelist.isEmpty()){
-			
-			AppsService.tab_MyApps	= context.getString(R.string.tab_MyApps);
+            LLg.i("new - loadLayout");
+
+            AppsService.tab_MyApps	= context.getString(R.string.tab_MyApps);
+
 	    	AppsService.tab_AllApps = context.getString(R.string.tab_AllApps);
 	    	AppsService.tab_FrqApps = context.getString(R.string.tab_FrqApps);
 	    	AppsService.tab_NewApps = context.getString(R.string.tab_NewApps);    
 	    	AppsService.tab_MyDocs = context.getString(R.string.tab_MyDocs);
-	    	 
-	    	
+            AppsService.tab_MySD   = context.getString(R.string.tab_MySD);
+			AppsService.tab_Stat = context.getString(R.string.tab_DeviceStatus);
+
 			pagelist.add(new TabPage().setTab(tab_AllApps).setID(ALLID).setAppsByAppInfo(applist));
 			pagelist.add(new TabPage().setTab(tab_FrqApps).setID(FRQID));
 			pagelist.add(new TabPage().setTab(tab_NewApps).setID(NEWID));
 			pagelist.add(new TabPage().setTab(tab_MyDocs).setID(DOCID));
-			 			
+			pagelist.add(new TabPage().setTab(tab_MySD).setID(SDID));
+
+            //pagelist.add(new TabPage().setTab(tab_Stat).setID(STATID));
 		}
-		
 		appendFolders(context);
-		
 		return pagelist;
  	}
 	
 	
 	public static void getAppsByLaunchIntent(Context context) {		
 		LLg.i("getAppsByLaunchIntent");
-		
-    	
 		ongoing = true;
 		PackageManager pm = context.getPackageManager();
 		
@@ -315,6 +325,7 @@ public class AppsService extends Service {
  	
 
 	private static void appendFolders (Context context) {
+        LLg.i("appendFolders");
 		if(pagelist != null && applist != null)
 			for(TabPage fp :pagelist) {
 				if(fp.isFolder()) {
@@ -326,7 +337,8 @@ public class AppsService extends Service {
 	}
 
 	
-   public static List<TabPage> movePage(Context context, String from, String to) {	
+   public static List<TabPage> movePage(Context context, String from, String to) {
+       LLg.i("movePage"+from+to);
 		int f=0, t=0;
 		for(int i=0;i < pagelist.size();i++) {
 			TabPage tp = pagelist.get(i);
@@ -342,14 +354,13 @@ public class AppsService extends Service {
 
 		return pagelist;
 	}
-	
-   public static int getFolderIcon(String folder) { 
-	   
+
+
+   public static int getFolderIcon(String folder) {
 	   if(folder.trim().startsWith("-A"))  return R.drawable.im64_home;
 	   else if(folder.trim().startsWith("-F"))  return R.drawable.im64_app_all;
 	   else if(folder.trim().startsWith("-N"))  return R.drawable.im64_app;
 	   else if(folder.trim().startsWith("-M"))  return R.drawable.im64_card;
-	   
 	   char i = folder.trim().toLowerCase().charAt(0);
 	   switch (i) {
 	   case 'a': return R.drawable.alpa_a;
@@ -384,7 +395,7 @@ public class AppsService extends Service {
 
 
    
-public static   ArrayList<DocInfo> getDocuments(String path) {
+public static  ArrayList<DocInfo> getDocuments(String path) {
 	   ArrayList<DocInfo>  docList = new ArrayList<DocInfo>();
 	   try {
 		   File directory = new File(path);
@@ -624,7 +635,7 @@ public static   ArrayList<DocInfo> getDocuments(String path) {
 	  pages.add(new TabItem(context.getString(R.string.action_REMOVEAPS), context.getResources().getDrawable(R.drawable.tb_x),-1));
 	  
 	  for(TabPage tp: pagelist)
-		    if(tp.getID() != ALLID && tp.getID() != FRQID && tp.getID() != NEWID && tp.getID() != DOCID)
+		    if(tp.getID() != ALLID && tp.getID() != FRQID && tp.getID() != NEWID && tp.getID() != DOCID  && tp.getID() != SDID)
 	       	    pages.add(new TabItem(tp.getTab(), context.getResources().getDrawable(getFolderIcon(tp.getTab())),tp.getID()));
 	  	  
 	  return pages;
@@ -644,10 +655,7 @@ public static   ArrayList<DocInfo> getDocuments(String path) {
 		  if(pagelist != null) for(TabPage tp: pagelist) if(tp.getTab().equals(pageName))  return tp;
 		  return null;
 		}
-	
-	
-	
-	
+
 	
 	public static List<TabPage>  categorizeAllApplications(Context context) {
 		LLg.i("categorizeAllApplications");
@@ -657,7 +665,8 @@ public static   ArrayList<DocInfo> getDocuments(String path) {
 		pagelist.add(new TabPage().setTab(tab_FrqApps).setID(FRQID));
 		pagelist.add(new TabPage().setTab(tab_NewApps).setID(NEWID));
 		pagelist.add(new TabPage().setTab(tab_MyDocs).setID(DOCID));
-		
+		pagelist.add(new TabPage().setTab(tab_MySD).setID(SDID));
+
 		for (ItemInfo ai: AppsService.applist) {			
 			String ctgr = AppsByCatagory.getCategory(ai.appPackage);
 			TabPage tb = (new TabPage()).setTab(ctgr).setFolder(false);
@@ -696,6 +705,7 @@ public static   ArrayList<DocInfo> getDocuments(String path) {
 	    context.sendBroadcast(intent);
 	}
 
+
 	public static String getLauncherClassName(Context context) {
 
 		final PackageManager pm = context.getPackageManager();
@@ -713,6 +723,5 @@ public static   ArrayList<DocInfo> getDocuments(String path) {
 	    return null;
 	}
 
-  
 }
  
