@@ -1,7 +1,5 @@
 package net.ossfree.launcher4;
 
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.app.WallpaperManager;
 import android.content.ActivityNotFoundException;
@@ -24,10 +22,13 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import net.ossfree.launcher4.Adapters.DocAdapter;
 import net.ossfree.launcher4.Logger.LLg;
 import net.ossfree.launcher4.Structures.DocInfo;
 import net.ossfree.launcher4.Structures.TabPage;
+
+import java.util.List;
 
 @SuppressLint({"DefaultLocale", "ValidFragment"})
 public class DocList<E> extends AppsList   {
@@ -40,18 +41,18 @@ public class DocList<E> extends AppsList   {
 		super(pg);
 	}
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		if(tabPage.getID() == AppsService.SDID)
-			docList = AppsService.getDocuments(MainActivity.getSDPath());
-	    else
-			docList = AppsService.getDocuments(Environment.getExternalStorageDirectory().toString());
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (tabPage.getID() == AppsService.SDID)
+            docList = AppsService.getDocuments(MainActivity.getSDPath());
+        else
+            docList = AppsService.getDocuments(Environment.getExternalStorageDirectory().toString());
 
-		if (MainActivity.isGridviewdoc())
-			return buildGrid(inflater, container);
-		else
-			return buildList(inflater, container);
-	}
+        if (MainActivity.isGridviewdoc())
+            return buildGrid(inflater, container);
+        else
+            return buildList(inflater, container);
+    }
 	 
 	@Override
 	public void onResume(){
@@ -169,31 +170,30 @@ public class DocList<E> extends AppsList   {
 		}
 	}
 
- 
-	private class ImageDownloaderTask extends AsyncTask<Integer, Void, Void> {
 
-		@Override
-		protected Void doInBackground(Integer... params) {
-			int start = params[0];
-			for (int x = start; x < docList.size(); x++) {
-				if (isCancelled()) {
-					x = docList.size();
-				} else {
-					DocInfo di = docList.get(x);
-					if (AppsService.isDocumentImage(di.appPackage) && di.appIcon == null) {
-						Bitmap bm = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(di.appPackage), 100, 100);						
-						di.appIcon = new BitmapDrawable(DocList.this.getResources(), bm);
-						getActivity().runOnUiThread(new Runnable() {
-								public void run() {
-					 				docAdapter.notifyDataSetChanged();
-								}
-							});
+    private class ImageDownloaderTask extends AsyncTask <Integer, Void, Void> {
+        @Override
+        protected Void doInBackground(Integer... params) {
+            int start = params[0];
+            for (int x = start; x < docList.size(); x++) {
+                if (isCancelled()) {
+                    x = docList.size();
+                } else {
+                    DocInfo di = docList.get(x);
+                    if (AppsService.isDocumentImage(di.appPackage) && di.appIcon == null) {
+                        Bitmap bm = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(di.appPackage), 100, 100);
+                        di.appIcon = new BitmapDrawable(DocList.this.getResources(), bm);
+                        getActivity().runOnUiThread(new Runnable() {
+                            public void run() {
+                                docAdapter.notifyDataSetChanged();
+                            }
+                        });
 
-					}
-				}
-			}
-			return null;
-		}
+                    }
+                }
+            }
+            return null;
+        }
 
 	}
 

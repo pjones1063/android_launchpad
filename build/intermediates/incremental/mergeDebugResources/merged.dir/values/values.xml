@@ -208,10 +208,23 @@
     <string name="service_mypad">My LaunchPad</string>
     <string name="service_remvoe">Remove From Launch Tab</string>
     <string name="service_uninstall">Uninstall App</string>
+    <string name="sys_battery">Battery:  %.1f</string>
+    <string name="sys_charged">Charged</string>
+    <string name="sys_chargelow">LOW</string>
+    <string name="sys_charging">Charging</string>
+    <string name="sys_discharge">Discharging</string>
+    <string name="sys_freemem">Sys Memory: %.0f MB </string>
+    <string name="sys_internalcard">Internal:</string>
+    <string name="sys_mediavol">Media Volume:</string>
+    <string name="sys_network">Network: </string>
+    <string name="sys_networknone">Network: none</string>
+    <string name="sys_sdcard">SD Card:</string>
+    <string name="sys_sleeptime">Sleep Time: %02d:%02d </string>
+    <string name="sys_uptime">Up Time: %02d:%02d</string>
     <string name="tab_Add">Add Folder To:</string>
     <string name="tab_AllApps">-All My Apps </string>
     <string name="tab_Cancel">Cancel</string>
-    <string name="tab_DeviceStatus">-Device Status</string>
+    <string name="tab_DeviceStatus">-System </string>
     <string name="tab_FrqApps">-Frequent Apps </string>
     <string name="tab_MyApps">My Launch Pads </string>
     <string name="tab_MyDocs">-My Phone </string>
@@ -296,7 +309,7 @@
     <style name="txBoxC" parent="@android:style/Widget.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        
+        <!-- item name="android:layout_marginLeft">2dp</item -->
         <item name="android:gravity">right</item>
         <item name="android:layout_marginRight">2dp</item>
         <item name="android:textColor">@color/snow</item>

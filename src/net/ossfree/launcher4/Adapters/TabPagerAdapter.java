@@ -1,16 +1,18 @@
 package net.ossfree.launcher4.Adapters;
 
-import java.util.List;
-
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.SparseArray;
+
 import net.ossfree.launcher4.AppsList;
 import net.ossfree.launcher4.AppsService;
 import net.ossfree.launcher4.DocList;
+import net.ossfree.launcher4.StatusList;
 import net.ossfree.launcher4.Structures.TabPage;
+
+import java.util.List;
 	
 	
 public class TabPagerAdapter extends FragmentStatePagerAdapter {
@@ -19,7 +21,7 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
 	private int totalPages = -1;
 
 	public TabPagerAdapter(FragmentManager fm) {super(fm);}
-	public void postAllFilter(String filter, Parcelable state ){ pages.get(0).postAllFilter(filter, state);}	
+	public void postAllFilter(String filter, Parcelable state ){ pages.get(1).postAllFilter(filter, state);}
 	public void postFilter(String filter, int i){if (i < totalPages) pages.get(i).postFilter(filter);}
 	
 	@Override
@@ -31,9 +33,10 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
 	public void addTabs(List<TabPage> tabPages) {
 		totalPages = 0;
 		for(TabPage tp : tabPages)	  
-		  if(tp.getID() == AppsService.DOCID)    pages.put(totalPages++, new DocList<Object>(tp));
-		  else if(tp.getID() == AppsService.SDID)   pages.put(totalPages++, new DocList<Object>(tp));
- 		  else if(!tp.isFolder())               pages.put(totalPages++, new AppsList(tp));
+		  if(tp.getID() == AppsService.DOCID)         pages.put(totalPages++, new DocList<Object>(tp));
+		  else if(tp.getID() == AppsService.SDID)     pages.put(totalPages++, new DocList<Object>(tp));
+		  else if(tp.getID() == AppsService.STATID)   pages.put(totalPages++, new StatusList<Object>(tp));
+ 		  else if(!tp.isFolder())                     pages.put(totalPages++, new AppsList(tp));
     }
 	
 }

@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-96:12
-INJECTED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-96:12
-INJECTED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-96:12
-INJECTED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-96:12
-INJECTED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-96:12
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:2:1-102:12
 	package
 		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:3:5-36
 	android:versionName
@@ -33,151 +33,171 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:9:5-67
 	android:name
 		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:11:22-73
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:10:5-80
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:10:22-77
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:12:22-77
 uses-permission#com.android.launcher.permission.INSTALL_SHORTCUT
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:11:5-88
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:13:5-88
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:11:22-85
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:13:22-85
+uses-permission#android.permission.READ_CALENDAR
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:14:5-72
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:14:22-69
+uses-permission#android.permission.BATTERY_STATS
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:15:5-71
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:15:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:17:5-73
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:17:22-70
 application
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:13:5-94:19
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:19:5-100:19
 	android:label
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:16:9-41
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:22:9-41
 	android:killAfterRestore
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:17:41-72
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:23:41-72
 	android:allowTaskReparenting
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:17:73-108
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:23:73-108
 	android:icon
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:15:9-45
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:21:9-45
 	android:allowBackup
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:20:9-35
 	android:theme
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:17:9-40
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:23:9-40
 activity#net.ossfree.launcher4.MainActivity
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:19:9-29:20
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:25:9-35:20
 	android:screenOrientation
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:23:13-49
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:29:13-49
 	android:label
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:21:13-45
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:27:13-45
 	android:launchMode
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:22:13-43
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:28:13-43
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:20:13-41
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:26:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:24:13-28:29
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:25:17-69
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:27:17-77
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:27:27-74
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:33:27-74
 activity#net.ossfree.launcher4.EditActivity
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:31:9-36:20
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:37:9-42:20
 	android:screenOrientation
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:34:13-49
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:40:13-49
 	android:label
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:33:13-56
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:39:13-56
 	android:theme
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:35:13-70
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:41:13-70
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:32:13-41
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:38:13-41
 activity#net.ossfree.launcher4.AppsWindow
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:38:9-43:20
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:44:9-49:20
 	android:screenOrientation
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:41:13-49
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:47:13-49
 	android:label
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:40:13-48
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:46:13-48
 	android:theme
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:42:13-73
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:48:13-73
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:39:13-39
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:45:13-39
 activity#net.ossfree.launcher4.DocWindow
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:45:9-50:20
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:51:9-56:20
 	android:screenOrientation
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:48:13-49
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:54:13-49
 	android:label
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:47:13-48
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:53:13-48
 	android:theme
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:49:13-73
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:55:13-73
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:46:13-38
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:52:13-38
 activity#net.ossfree.launcher4.TabsList
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:52:9-60:20
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:58:9-66:20
 	android:screenOrientation
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:55:13-49
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:61:13-49
 	android:label
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:54:13-59
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:60:13-59
 	android:theme
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:56:13-73
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:62:13-73
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:53:13-37
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:59:13-37
 intent-filter#action:name:android.appwidget.action.APPWIDGET_CONFIGURE
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:57:13-59:29
-action#android.appwidget.action.APPWIDGET_CONFIGURE
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:58:17-87
-	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:58:25-84
-receiver#net.ossfree.launcher4.UpdateManager
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:62:9-76:20
-	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:62:19-48
-intent-filter#action:name:android.intent.action.BOOT_COMPLETED
 ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:63:13-65:29
+action#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:64:17-87
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:64:25-84
+receiver#net.ossfree.launcher4.UpdateManager
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:68:9-82:20
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:68:19-48
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:69:13-71:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:64:17-79
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:70:17-79
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:64:25-76
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:70:25-76
 intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_CHANGED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:66:13-72:29
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:72:13-78:29
 action#android.intent.action.PACKAGE_ADDED
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:67:17-78
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:73:17-78
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:67:25-75
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:73:25-75
 action#android.intent.action.PACKAGE_CHANGED
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:68:17-80
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:74:17-80
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:68:25-77
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:74:25-77
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:69:17-80
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:75:17-80
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:69:25-77
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:75:25-77
 data
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:71:17-50
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:77:17-50
 	android:scheme
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:71:23-47
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:77:23-47
 intent-filter#action:name:net.ossfree.launcher4.LaunchApp
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:73:13-75:29
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:79:13-81:29
 action#net.ossfree.launcher4.LaunchApp
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:74:17-74
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:80:17-74
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:74:25-71
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:80:25-71
 receiver#net.ossfree.launcher4.WidgetProvider
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:77:9-88:20
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:83:9-94:20
 	android:label
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:80:13-57
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:86:13-57
 	android:icon
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:79:13-49
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:85:13-49
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:78:13-43
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:84:13-43
 intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:81:13-83:29
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:87:13-89:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:82:17-84
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:88:17-84
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:82:25-81
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:88:25-81
 meta-data#android.appwidget.provider
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:85:13-87:55
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:91:13-93:55
 	android:resource
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:87:17-52
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:93:17-52
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:86:17-58
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:92:17-58
 service#net.ossfree.launcher4.AppsService
-ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:90:9-92:38
+ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:96:9-98:38
 	android:enabled
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:92:13-35
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:98:13-35
 	android:name
-		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:91:13-40
+		ADDED from C:\Users\paul\Projects\android_launchpad\AndroidManifest.xml:97:13-40

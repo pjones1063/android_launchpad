@@ -1,191 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_alignParentTop="true"
-    android:background="@drawable/grad1"
-    android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/refresh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="5dp"
-        android:textColor="@color/snow"
-        android:textSize="21dp"
-        android:text="↺" />
-
-
-    <ProgressBar
-        android:id="@+id/refreshPB"
-        style="@style/pbBar3"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:visibility="invisible"/>
-
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/refresh"
-        style="@style/txBoxH"
-        android:text="My Status" />
-
-    <android.widget.TextClock
-        android:id="@+id/textClock1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/txBoxC"
-        android:layout_toRightOf="@+id/title"
-        android:layout_alignParentRight="true"/>
+    android:layout_height="fill_parent">
 
     <TextView
         android:id="@+id/textDate1"
+        style="@style/txBoxC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/txBoxD"
-        android:layout_below="@+id/textClock1"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp" />
 
-    <TextView
-        android:id="@+id/network"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/txBoxD"
-        android:layout_below="@+id/textClock1"
-        android:layout_alignParentLeft="true"/>
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textDate1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_action_refresh" />
 
-    <ImageView
-        android:id="@+id/ln1"
-        style="@style/line1"
-        android:layout_below="@+id/network" />
-
-    <RelativeLayout
+    <android.widget.TextClock
+        android:id="@+id/textClock1"
+        style="@style/txBoxC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ln1"
-        android:background="@drawable/grad" >
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textDate1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/infolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textClock1">
+
+        <!-- network -->
+        <TextView
+            android:id="@+id/network"
+            style="@style/txBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
 
 
         <!-- Up Times -->
         <TextView
             android:id="@+id/uptime"
-            style="@style/txBox1"  />
+            style="@style/txBox1"
+            android:layout_below="@id/network" />
 
-
-        <ImageView
-            android:id="@+id/stn"
-            android:src="@drawable/ic_launcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_alignParentRight="true"/>
-
+        <!-- Up Times -->
         <TextView
             android:id="@+id/ip"
             style="@style/txBox1"
             android:layout_below="@+id/uptime" />
-
 
         <!--  Battery  -->
         <TextView
             android:id="@+id/batDat1"
             style="@style/txBox1"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/ip"/>
+            android:layout_below="@+id/ip" />
 
         <TextView
             android:id="@+id/batDat2"
             style="@style/txBox1"
-            android:layout_toEndOf="@+id/batDat1"
-            android:layout_below="@+id/ip"/>
+            android:layout_below="@+id/ip"
+            android:layout_toEndOf="@+id/batDat1" />
 
         <TextView
             android:id="@+id/batDat3"
             style="@style/txBox1"
-            android:layout_toEndOf="@+id/batDat2"
-            android:layout_below="@+id/ip"/>
+            android:layout_below="@+id/ip"
+            android:layout_toEndOf="@+id/batDat2" />
 
 
         <TextView
-            android:id="@+id/batStat"
+            android:id="@+id/batSt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/batDat1"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="5dp"
-            android:textColor="@color/snow"
-            android:textSize="11sp"
-            android:typeface="sans"
-            android:layout_below="@+id/batDat1"/>
+            android:textColor="@color/snow" />
 
         <ImageView
             android:id="@+id/batWPB"
             style="@style/wPbBar1"
-            android:layout_below="@+id/batStat" />
+            android:layout_below="@+id/batSt" />
+
+        <ImageView
+            android:id="@+id/ln2"
+            style="@style/line1"
+            android:layout_below="@+id/batWPB"
+            android:paddingTop="80dp" />
 
 
+        <!--  Free Memory -->
+        <TextView
+            android:id="@+id/freeM1"
+            style="@style/txBox1"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ln2" />
+
+        <TextView
+            android:id="@+id/freeM2"
+            style="@style/txBox1"
+            android:layout_below="@+id/ln2"
+            android:layout_toEndOf="@+id/freeM1" />
+
+        <TextView
+            android:id="@+id/freeM3"
+            style="@style/txBox1"
+            android:layout_below="@+id/ln2"
+            android:layout_toEndOf="@+id/freeM2" />
+
+        <ImageView
+            android:id="@+id/freeMwpb"
+            style="@style/wPbBar1"
+            android:layout_below="@+id/freeM1" />
 
         <!--  SD Card  -->
         <TextView
             android:id="@+id/freeSD1"
             style="@style/txBox1"
-            android:layout_below="@+id/batWPB"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/freeMwpb" />
 
         <TextView
             android:id="@+id/freeSD2"
             style="@style/txBox1"
-            android:layout_below="@+id/batWPB"
-            android:layout_toEndOf="@+id/freeSD1"/>
+            android:layout_below="@+id/freeMwpb"
+            android:layout_toEndOf="@+id/freeSD1" />
 
         <TextView
             android:id="@+id/freeSD3"
             style="@style/txBox1"
-            android:layout_below="@+id/batWPB"
-            android:layout_toEndOf="@+id/freeSD2"/>
+            android:layout_below="@+id/freeMwpb"
+            android:layout_toEndOf="@+id/freeSD2" />
+
 
         <ImageView
             android:id="@+id/freeSDwpb"
             style="@style/wPbBar1"
-            android:layout_below="@+id/freeSD1"/>
+            android:layout_below="@+id/freeSD1" />
 
 
         <!--  Internal Card   -->
-
-
         <TextView
             android:id="@+id/freeIT1"
             style="@style/txBox1"
-            android:layout_below="@+id/freeSDwpb"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/freeSDwpb" />
 
         <TextView
             android:id="@+id/freeIT2"
             style="@style/txBox1"
             android:layout_below="@+id/freeSDwpb"
-            android:layout_toEndOf="@+id/freeIT1"/>
+            android:layout_toEndOf="@+id/freeIT1" />
 
         <TextView
             android:id="@+id/freeIT3"
             style="@style/txBox1"
             android:layout_below="@+id/freeSDwpb"
-            android:layout_toEndOf="@+id/freeIT2"/>
+            android:layout_toEndOf="@+id/freeIT2" />
 
         <ImageView
             android:id="@+id/freeITwpb"
             style="@style/wPbBar1"
-            android:layout_below="@+id/freeIT1"/>
+            android:layout_below="@+id/freeIT1" />
 
-        <ImageView style="@style/line1"
-            android:id="@+id/ln2"
-            android:layout_below="@+id/freeITwpb"/>
-
+        <ImageView
+            android:id="@+id/lne"
+            style="@style/line1"
+            android:layout_below="@+id/freeITwpb" />
 
 
     </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/infolayout"/>
 
 </RelativeLayout>

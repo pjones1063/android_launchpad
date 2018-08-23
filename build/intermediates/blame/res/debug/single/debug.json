@@ -240,6 +240,10 @@
         "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-ldpi\\im64_media_player.png"
     },
     {
+        "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_fldr2.png.flat",
+        "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-hdpi\\fldr2.png"
+    },
+    {
         "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_alpa_e.png.flat",
         "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-xhdpi\\alpa_e.png"
     },
@@ -410,6 +414,10 @@
     {
         "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_subdirectory_arrow_left_white_48dp.png.flat",
         "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-mdpi\\ic_subdirectory_arrow_left_white_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_fldr2.png.flat",
+        "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-xhdpi\\fldr2.png"
     },
     {
         "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\layout_doc_window_grid.xml.flat",
@@ -930,6 +938,10 @@
     {
         "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_alpa_c.png.flat",
         "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-xxhdpi\\alpa_c.png"
+    },
+    {
+        "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_fldr2.png.flat",
+        "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-ldpi\\fldr2.png"
     },
     {
         "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_star.png.flat",
@@ -1790,6 +1802,10 @@
     {
         "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_im64_folder.png.flat",
         "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-xhdpi\\im64_folder.png"
+    },
+    {
+        "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_fldr2.png.flat",
+        "source": "C:\\Users\\paul\\Projects\\android_launchpad\\res\\drawable-mdpi\\fldr2.png"
     },
     {
         "merged": "C:\\Users\\paul\\Projects\\android_launchpad\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_im64_admin.png.flat",

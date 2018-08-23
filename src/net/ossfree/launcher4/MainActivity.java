@@ -51,7 +51,6 @@ import net.ossfree.launcher4.Structures.TabPage;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-
 @SuppressWarnings("deprecation")
 @SuppressLint({ "InflateParams", "RtlHardcoded" })
 public class MainActivity extends FragmentActivity implements SearchView.OnQueryTextListener, ActionBar.TabListener {
@@ -242,7 +241,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
                 tbr.setTypeface(Typeface.createFromAsset(getAssets(), "font/Prototype.ttf"));
                 switch (tp.getID()) {
                     case AppsService.STATID:
-                        tbr.setTextColor(getResources().getColor(R.color.beige));
+                        tbr.setTextColor(getResources().getColor(R.color.lightcyan));
                         break;
                     case AppsService.ALLID:
                         tbr.setTextColor(getResources().getColor(R.color.aliceblue));
@@ -259,7 +258,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
                     case AppsService.SDID:
                         tbr.setTextColor(getResources().getColor(R.color.cornflowerblue));
                         break;
-                    default:
+					default:
                         tbr.setTextColor(getResources().getColor(R.color.antiquewhite));
                         break;
                 }
@@ -273,9 +272,9 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
             }
 
             if (tp != null && tp.getTab() != null) {
-    		  String s = tp.getTab().trim();
-			   sb.add(new TabItem(s, getResources().getDrawable(AppsService.getFolderIcon(s)),tp.getID()));
-    		}
+    		    String s = tp.getTab().trim();
+                sb.add(new TabItem(s, getResources().getDrawable(AppsService.getFolderIcon(s)), tp.getID()));
+            }
     	}
 
     	AppsService.currentTab = ct;
@@ -315,6 +314,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     	};
     	drwrLayout.setDrawerListener(drwrToggle);
     	tabPager.setVisibility(View.VISIBLE);
+        if(tabPager.getCurrentItem() == 0) positionTab(1);
  
     }
   
@@ -479,8 +479,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     				}
     			}});
 
-    		showAlertDialog(alertDialog);	
-    		 
+    		showAlertDialog(alertDialog);
     }
 
     
@@ -622,169 +621,171 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-       
-    	if (drwrToggle.onOptionsItemSelected(item)) return true; 
-    	
-    	// Handle item selection
+
+        if (drwrToggle.onOptionsItemSelected(item)) return true;
+
+        // Handle item selection
         switch (item.getItemId()) {
-       
-        case android.R.id.home:
-        	positionTab(0);
-			clearSearch();
-			clearAllView();
-        	return true;
-        	
-        case R.id.action_add:
-            processTabOptions(R.id.action_add);
-            return true;
-            
-        case R.id.action_rearrange:
-        	startActivityForResult(new Intent(this, TabsList.class).putExtra(AppsService.LISTER, true), 0);        	
-        	return true;
-                  
 
-        case R.id.action_gridView:
-        	if(!isGridview()) {
-        		setGridview(true);
-        		buildAppsView();				
-        	}        	
-        	return true;
-        	
-        case R.id.action_ListView:
-        	if(isGridview()) {
-        		setGridview(false);
-				buildAppsView();
-				
-        	}
-        	return true;
-        	     
-        case R.id.action_gridViewDoc:
-        	if(!isGridviewdoc()) {
-        		setGridviewdoc(true);
-        		buildAppsView();				
-        	}        	
-        	return true;
-        	
-        case R.id.action_ListViewDoc:
-        	if(isGridviewdoc()) {
-        		setGridviewdoc(false);
-				buildAppsView();
-				
-        	}
-        	return true;	
-        	
-        	
-        case R.id.action_hideappname:
-        	if(isTextview()) {
-        		setTextview(false);
-        		setGridview(true);
-				buildAppsView();
-        	}
-        	return true;
-        	
-        case R.id.action_showappname:
-        	if(!isTextview()) {
-        		setTextview(true);
-				buildAppsView();
-        	}
-        	return true;
+            case android.R.id.home:
+                positionTab(1);
+                clearSearch();
+                clearAllView();
+                return true;
 
-        case R.id.action_alphSort:
-        	if(getSortView() != AppsService.ALPHASORT) {
-        		setSortView(AppsService.ALPHASORT);
-				buildAppsView();
-        	}
-        	return true;	
-        	
-        case R.id.action_dateSort:
-        	if(getSortView() != AppsService.DATESORT) {
-        		setSortView(AppsService.DATESORT);
-				buildAppsView();
-        	}
-        	return true;	
-        
-        case R.id.action_freqSort:
-        	if(getSortView() != AppsService.FREQSORT) {
-        		setSortView(AppsService.FREQSORT);
-				buildAppsView();
-        	}
-        	return true;	
-        
-        case R.id.action_Flow:
-        	if(getPageview() != AppsService.FLOWOVER) {
-        		setPageview(AppsService.FLOWOVER);
-				buildAppsView();
-        	}
-        	return true;
+            case R.id.action_add:
+                processTabOptions(R.id.action_add);
+                return true;
 
-        case R.id.action_Depth:
-        	if(getPageview() != AppsService.DEPTHOVER) {
-        		setPageview(AppsService.DEPTHOVER);
-				buildAppsView();
-        	}
-        	return true;
+            case R.id.action_rearrange:
+                startActivityForResult(new Intent(this, TabsList.class).putExtra(AppsService.LISTER, true), 0);
+                return true;
 
-        case R.id.action_Zoom:
-        	if(getPageview()  != AppsService.ZOOMOVER) {
-        		setPageview(AppsService.ZOOMOVER);
-				buildAppsView();
-        	}
-        	return true;
-        	
-        case R.id.action_Slide:
-        	if(getPageview()  != AppsService.SLIDEOVER) {
-        		setPageview(AppsService.SLIDEOVER);
-				buildAppsView();
-        	}
-        	return true;
-        	
-        case R.id.action_clearfreqs:	
-        	 showAlertDialog(
-                new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK) 
-              	   .setMessage(getString(R.string.doprogress5))
-              	   .setIcon(android.R.drawable.ic_dialog_alert)
-              	   .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-              	    public void onClick(DialogInterface dialog, int whichButton) {
-              	    	AppsService.clearFreqTab(getApplicationContext());
-              	    	buildAppsView();
-              	    }}).setNegativeButton(android.R.string.no, null));
-        
-        	return true;
 
-         case R.id.action_sdpath:
-             final EditText input = new EditText(this);
-             input.setText(sd_path);
-             showAlertDialog(
-                   new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
-                      .setMessage("SD Patth")
-                       .setIcon(android.R.drawable.ic_dialog_alert)
-                       .setView(input)
-                       .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                               public void onClick(DialogInterface dialog, int whichButton) {
-                                       setSDPath(input.getText().toString());
-                                    }}).setNegativeButton(android.R.string.no, null));
+            case R.id.action_gridView:
+                if (!isGridview()) {
+                    setGridview(true);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_ListView:
+                if (isGridview()) {
+                    setGridview(false);
+                    buildAppsView();
+
+                }
+                return true;
+
+            case R.id.action_gridViewDoc:
+                if (!isGridviewdoc()) {
+                    setGridviewdoc(true);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_ListViewDoc:
+                if (isGridviewdoc()) {
+                    setGridviewdoc(false);
+                    buildAppsView();
+
+                }
+                return true;
+
+
+            case R.id.action_hideappname:
+                if (isTextview()) {
+                    setTextview(false);
+                    setGridview(true);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_showappname:
+                if (!isTextview()) {
+                    setTextview(true);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_alphSort:
+                if (getSortView() != AppsService.ALPHASORT) {
+                    setSortView(AppsService.ALPHASORT);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_dateSort:
+                if (getSortView() != AppsService.DATESORT) {
+                    setSortView(AppsService.DATESORT);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_freqSort:
+                if (getSortView() != AppsService.FREQSORT) {
+                    setSortView(AppsService.FREQSORT);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_Flow:
+                if (getPageview() != AppsService.FLOWOVER) {
+                    setPageview(AppsService.FLOWOVER);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_Depth:
+                if (getPageview() != AppsService.DEPTHOVER) {
+                    setPageview(AppsService.DEPTHOVER);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_Zoom:
+                if (getPageview() != AppsService.ZOOMOVER) {
+                    setPageview(AppsService.ZOOMOVER);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_Slide:
+                if (getPageview() != AppsService.SLIDEOVER) {
+                    setPageview(AppsService.SLIDEOVER);
+                    buildAppsView();
+                }
+                return true;
+
+            case R.id.action_clearfreqs:
+                showAlertDialog(
+                        new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
+                                .setMessage(getString(R.string.doprogress5))
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                        AppsService.clearFreqTab(getApplicationContext());
+                                        buildAppsView();
+                                    }
+                                }).setNegativeButton(android.R.string.no, null));
+
+                return true;
+
+            case R.id.action_sdpath:
+                final EditText input = new EditText(this);
+                input.setText(sd_path);
+                showAlertDialog(
+                        new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
+                                .setMessage(getString(R.string.action_sdPath))
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setView(input)
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                        setSDPath(input.getText().toString());
+                                    }
+                                }).setNegativeButton(android.R.string.no, null));
 
                 return true;
 
             case R.id.action_catallapps:
-        	showAlertDialog(
-          	  new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
-        	   .setMessage(getString(R.string.doprogress3))
-        	   .setIcon(android.R.drawable.ic_dialog_alert)
-        	   .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-        	    public void onClick(DialogInterface dialog, int whichButton) {
-        	    	new CategorizeAllApplications().execute(); 
-        	    }}).setNegativeButton(android.R.string.no, null));
-             	
-        	return true;
-        	
-        default:
-            return super.onOptionsItemSelected(item);
+                showAlertDialog(
+                        new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
+                                .setMessage(getString(R.string.doprogress3))
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                        new CategorizeAllApplications().execute();
+                                    }
+                                }).setNegativeButton(android.R.string.no, null));
+
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 
 
-    
     @Override
 	public boolean onQueryTextChange(String filter) {
 		LLg.i("onQueryTextChange:"+filter);
@@ -803,6 +804,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
 	@Override
     protected void onResume() {
     	super.onResume();
+		SystemInfo.getSI().collectData(this);
         final SharedPreferences sp = getSharedPreferences(AppsService.PREFS, MODE_MULTI_PROCESS);
     	gridview = sp.getBoolean(AppsService.GRIDMODE, true);
     	gridviewdoc = sp.getBoolean(AppsService.GRIDMODEDOC, false);
@@ -909,7 +911,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     }
 
 	protected void showAllView(String filter,Parcelable state ) {
-    	if(filter != null && filter.length() > 0 ) positionTab(0);
+    	if(filter != null && filter.length() > 0 ) positionTab(1);
     	if(tabAdapter != null) tabAdapter.postAllFilter(filter, state);
     }
 

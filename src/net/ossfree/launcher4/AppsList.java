@@ -1,6 +1,5 @@
 package net.ossfree.launcher4;
 
-
 import android.annotation.SuppressLint;
 import android.app.WallpaperManager;
 import android.content.ActivityNotFoundException;
@@ -99,10 +98,12 @@ public class AppsList extends Fragment   {
 		bigList.setAdapter(appsAdapter);
 		bigList.setOnLongClickListener(new OnLongClickListener() {
 			public boolean onLongClick(View v) {
-				if(tabPage.getID() == AppsService.ALLID  || tabPage.getID() == AppsService.FRQID  
+				if(tabPage.getID() == AppsService.ALLID
+						|| tabPage.getID() == AppsService.FRQID
 						|| tabPage.getID() == AppsService.NEWID
 						|| tabPage.getID() == AppsService.DOCID
-						|| tabPage.getID() == AppsService.SDID) {
+						|| tabPage.getID() == AppsService.SDID
+						|| tabPage.getID() == AppsService.STATID) {
 					
 				} else {
 					((MainActivity)getActivity()).buildTabOptions();
@@ -135,9 +136,7 @@ public class AppsList extends Fragment   {
 		return buildAlphaList(inflater, apps);
 	}
 
-	
-	
-	
+
 	private View  buildAlphaList(LayoutInflater inflater, View apps ) {
  	   sideList = (ListView) apps.findViewById(R.id.sideIndex);
 	   ala = new AlphaAdapter(getActivity(), R.layout.side_row);
@@ -163,10 +162,14 @@ public class AppsList extends Fragment   {
 		});
 
 	   final ImageView edit = (ImageView) apps.findViewById(R.id.edt);
-	   if(tabPage.getID() == AppsService.ALLID  || tabPage.getID() == AppsService.FRQID  
+	   if(tabPage.getID() == AppsService.ALLID
+			       || tabPage.getID() == AppsService.FRQID
 			       || tabPage.getID() == AppsService.NEWID
 			       || tabPage.getID() == AppsService.DOCID
-			       || tabPage.getID() == AppsService.SDID) {
+			       || tabPage.getID() == AppsService.SDID
+			       || tabPage.getID() == AppsService.STATID
+
+			   ) {
 		   edit.setImageResource(R.drawable.ic_add_white_48dp);
 		   edit.setOnClickListener(new View.OnClickListener() {
 			   @Override
@@ -193,7 +196,7 @@ public class AppsList extends Fragment   {
 		home.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {			
-				((MainActivity)getActivity()).positionTab(0);
+				((MainActivity)getActivity()).positionTab(1);
 				((MainActivity)getActivity()).clearSearch();
 				((MainActivity)getActivity()).clearAllView();
 				sideList.smoothScrollToPosition(0);

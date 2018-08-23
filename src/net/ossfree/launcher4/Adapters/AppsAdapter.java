@@ -1,12 +1,7 @@
 package net.ossfree.launcher4.Adapters;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import android.annotation.SuppressLint;
-import android.content.Context; 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,14 +9,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import net.ossfree.launcher4.AppsService;
+import net.ossfree.launcher4.Logger.LLg;
 import net.ossfree.launcher4.MainActivity;
 import net.ossfree.launcher4.R;
-import net.ossfree.launcher4.Logger.LLg;
 import net.ossfree.launcher4.Structures.ItemInfo;
 import net.ossfree.launcher4.Structures.PackageInfo;
 import net.ossfree.launcher4.Structures.TabPage;
 import net.ossfree.launcher4.ViewHolders.AppsHolder;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 @SuppressLint("DefaultLocale")
 @SuppressWarnings("unchecked")
@@ -141,8 +142,7 @@ public class AppsAdapter extends ArrayAdapter <ItemInfo>  {
 		}
 		
 		
-		private List<ItemInfo> filterFreq(CharSequence constraint) {	
-			 
+		private List<ItemInfo> filterFreq(CharSequence constraint) {
 			List<ItemInfo> filt = new ArrayList<ItemInfo>();
 			List<PackageInfo> packageList = new ArrayList<PackageInfo>(AppsService.freqList);
 			Collections.sort(packageList, new Comparator<PackageInfo>() {
