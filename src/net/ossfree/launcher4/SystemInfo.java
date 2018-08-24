@@ -67,11 +67,6 @@ public class SystemInfo {
         }
     }
 
-
-
-
-
-
     public static SystemInfo getSI() {
         if (systemInfo == null) systemInfo = new SystemInfo();
         return systemInfo;

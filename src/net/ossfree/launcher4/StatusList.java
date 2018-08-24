@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import net.ossfree.launcher4.Logger.LLg;
 import net.ossfree.launcher4.Structures.TabPage;
 
 import java.text.SimpleDateFormat;
@@ -45,8 +46,6 @@ public class StatusList<O> extends AppsList implements View.OnClickListener {
         ((Button) status.findViewById(R.id.refresh)).setOnClickListener(this);
 
         ((TextView) status.findViewById(R.id.textDate1)).setOnClickListener(this);
-//        ((TextView) status.findViewById(R.id.textClock1)).setOnClickListener(this);
-
         ((TextView) status.findViewById(R.id.uptime)).setOnClickListener(this);
         ((TextView) status.findViewById(R.id.network)).setOnClickListener(this);
         ((TextView) status.findViewById(R.id.ip)).setOnClickListener(this);
@@ -85,10 +84,14 @@ public class StatusList<O> extends AppsList implements View.OnClickListener {
         ((TextView) status.findViewById(R.id.freeIT3)).setText(SystemInfo.getSI().getITPrcnt());
         ((ImageView) status.findViewById(R.id.freeITwpb)).setImageBitmap(SystemInfo.getSI().getITSpaceWPB());
 
-        WebView webView = (WebView) status.findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setAppCacheEnabled(true);
-        webView.loadUrl("https://weather.gc.ca/wxlink/wxlink.html?cityCode=on-109&amp;lang=e");
+        try {
+            WebView webView = (WebView) status.findViewById(R.id.webView);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.getSettings().setAppCacheEnabled(true);
+            webView.loadUrl(MainActivity.getWeather_uri());
+        }catch (Exception e) {
+            LLg.e(e.getMessage());
+        }
 
         switch (SystemInfo.getSI().getBatryStat()) {
             case BatteryManager.BATTERY_STATUS_FULL:
@@ -124,7 +127,6 @@ public class StatusList<O> extends AppsList implements View.OnClickListener {
         startActivity(new Intent(Intent.ACTION_VIEW, builder.build()));
     }
 
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -132,11 +134,7 @@ public class StatusList<O> extends AppsList implements View.OnClickListener {
                 updateInfo();
                 break;
 
-            case R.id.textClock1:
-                showCalendar();
-                break;
-
-            case R.id.textDate1:
+            case R.id.textClock1:   case R.id.textDate1:
                 showCalendar();
                 break;
 

@@ -44,6 +44,7 @@
     <string name="action_hideappname">Hide App Name</string>
     <string name="action_DupFolder">Duplicate Folder - Cannot have two folders with the same name</string>   
     <string name="action_clearfreqs">Clear Frequent Tab</string>
+    <string name="action_weatherURI">Weather HTML URL</string>
 
     <string name="tab_MyApps">My Launch Pads </string>
 	<string name="tab_AllApps">-All My Apps </string>

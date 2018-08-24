@@ -159,6 +159,13 @@
 		android:showAsAction="never"
 		android:title="@string/action_sdPath"/>
 
+	<item
+		android:id="@+id/action_weatherURI"
+		android:icon="@drawable/ic_drawer"
+		android:orderInCategory="850"
+		android:showAsAction="never"
+		android:title="@string/action_weatherURI"/>
+
    <item
         android:id="@+id/action_catallapps"
         android:icon="@drawable/ic_action_refresh"

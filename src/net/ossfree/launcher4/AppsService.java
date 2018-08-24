@@ -55,9 +55,11 @@ public class AppsService extends Service {
 	public  static final String DROPPER		   = "net.ossfree.launcher4.DropperApp.";
 	public  static final String FIRSTRUN	   = "net.ossfree.launcher4.FirstRun.";
 	public  static final String TARGET   	   = "net.ossfree.launcher4.TargetTab.";
+    public  static final String WEATHER_URI = "net.ossfree.launcher4.WeatherURI.";
 
-		
-	public static final int TABEXACT  = 1963;
+
+
+    public static final int TABEXACT  = 1963;
 	public static final int FLOWOVER  = 10;
 	public static final int DEPTHOVER = 20;
 	public static final int ZOOMOVER  = 30;

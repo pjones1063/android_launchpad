@@ -183,6 +183,7 @@
     <string name="action_showappname">Display App Name</string>
     <string name="action_slide">Slide-Fade Transition</string>
     <string name="action_tabName">Launch Tab Name: </string>
+    <string name="action_weatherURI">Weather HTML URL</string>
     <string name="action_websearch">Web Aearch</string>
     <string name="action_zoom">Zoom Transition</string>
     <string name="app_name">LaunchPad 4</string>

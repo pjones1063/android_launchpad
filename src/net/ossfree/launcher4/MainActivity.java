@@ -69,7 +69,8 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
 	private static int pageview = AppsService.DEPTHOVER;
 	private boolean fireresult = false;
     private static String sd_path = "/storage/CC66-6F37";
-	 	
+	// private static String weather_uri = "https://weather.gc.ca/wxlink/wxlink.html?cityCode=on-109&amp;lang=e";
+    private static String weather_uri = "https://weather.gc.ca/wxlink/wxlink.html?cityCode=on-143&amp;lang=e";
     public  MainActivity(){}
 
  	public class CategorizeAllApplications extends AsyncTask<Void, Void, Void> {
@@ -466,7 +467,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     						Toast.makeText(MainActivity.this, getString(R.string.doedits2), Toast.LENGTH_LONG).show();
     					} else {
     						 showAlertDialog(new AlertDialog.Builder(MainActivity.this, AlertDialog.THEME_HOLO_DARK)
-    								 .setTitle(getString(R.string.action_delTab))
+    								 .setTitle("Visit - weather.gc.ca/business/index_e.html")
     								 .setIcon(android.R.drawable.ic_dialog_alert)
     								 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
     									 public void onClick(DialogInterface dialog, int whichButton) { deleteTab();}})
@@ -495,6 +496,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     public static  boolean isTextview() { return textview; }
     public static  int getSortView() { return sortview; }
     public static String getSDPath() {return sd_path;}
+    public static String getWeather_uri() {return weather_uri;}
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {  	        
@@ -748,23 +750,36 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
                                         buildAppsView();
                                     }
                                 }).setNegativeButton(android.R.string.no, null));
-
                 return true;
 
             case R.id.action_sdpath:
-                final EditText input = new EditText(this);
-                input.setText(sd_path);
+                final EditText input_sdcard = new EditText(this);
+                input_sdcard.setText(sd_path);
                 showAlertDialog(
                         new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
                                 .setMessage(getString(R.string.action_sdPath))
                                 .setIcon(android.R.drawable.ic_dialog_alert)
-                                .setView(input)
+                                .setView(input_sdcard)
                                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int whichButton) {
-                                        setSDPath(input.getText().toString());
+                                        setSDPath(input_sdcard.getText().toString());
                                     }
                                 }).setNegativeButton(android.R.string.no, null));
+                return true;
 
+            case R.id.action_weatherURI:
+                final EditText input_wuri = new EditText(this);
+                input_wuri.setText(weather_uri);
+                showAlertDialog(
+                        new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK)
+                                .setMessage(getString(R.string.action_weatherURI))
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setView(input_wuri)
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                        setWeather_uri(input_wuri.getText().toString());
+                                    }
+                                }).setNegativeButton(android.R.string.no, null));
                 return true;
 
             case R.id.action_catallapps:
@@ -812,6 +827,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     	sortview = sp.getInt(AppsService.SORTMODE,AppsService.ALPHASORT);
     	pageview = sp.getInt(AppsService.PAGEMODE, AppsService.DEPTHOVER);
     	sd_path = sp.getString(AppsService.SDPATH, sd_path);
+    	weather_uri = sp.getString(AppsService.WEATHER_URI, weather_uri);
         buildAppsView(); 
 		final SharedPreferences.Editor ed = sp.edit();
 		ed.putBoolean(AppsService.FIRSTRUN, false);
@@ -860,6 +876,7 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
     	editor.putInt(AppsService.SORTMODE,        getSortView());
      	editor.putInt(AppsService.PAGEMODE,        getPageview());
         editor.putString(AppsService.SDPATH,       getSDPath());
+        editor.putString(AppsService.WEATHER_URI,  getWeather_uri());
     	editor.commit();
     }
 	
@@ -907,6 +924,10 @@ public class MainActivity extends FragmentActivity implements SearchView.OnQuery
 
     public void setSDPath(String sd) {
         MainActivity.sd_path = sd;
+        saveSharedPreferences();
+    }
+    public void setWeather_uri(String wUri) {
+        MainActivity.weather_uri = wUri;
         saveSharedPreferences();
     }
 
