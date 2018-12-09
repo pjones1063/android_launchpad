@@ -38,8 +38,7 @@ public class AppsService extends Service {
 	public  static final String PKGDATA        = "net.ossfree.launcher4";
 	public  static final String PAGEDATA       = "net.ossfree.launcher4.AppsData.dat";
 	public  static final String FREQDATA       = "net.ossfree.launcher4.FreqData.dat";
-	public  static final String NEWDATA        = "net.ossfree.launcher4.NewAppsData.dat";
-	public  static final String FOLDER	 	   = "net.ossfree.launcher4.FolderItem.";
+    public  static final String FOLDER	 	   = "net.ossfree.launcher4.FolderItem.";
 	public  static final String TABPOS         = "net.ossfree.launcher4.TabPosition.";
 	public  static final String TABID          = "net.ossfree.launcher4.TabID.";
 	public  static final String CLICK          = "net.ossfree.launcher4.WidetClicker.";
