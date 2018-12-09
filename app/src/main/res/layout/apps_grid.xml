@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:orientation="horizontal"  >
+
+  <GridView 
+    android:id="@+id/appsIndex"
+    android:numColumns="auto_fit"
+    android:gravity="center"
+    android:columnWidth="75dp"
+    android:stretchMode="columnWidth"
+    android:background="@color/black"
+    android:layout_weight="0.55"
+    android:layout_width="0dp"
+    android:layout_height="fill_parent" > 
+</GridView>
+ 
+  <LinearLayout 
+        android:layout_width="40dip"
+        android:background="@color/black"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"  >
+  
+  <ImageView
+        android:id="@+id/fldr"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:src="@drawable/ic_settings_white_24dp"  />
+           
+  <ImageView
+        android:id="@+id/ln0"
+        style="@style/line2" />
+        
+    <ImageView
+        android:id="@+id/edt"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:src="@drawable/ic_action_edit"  />
+   
+  <ImageView
+        android:id="@+id/ln1"
+        style="@style/line2"   />
+  
+  <ImageView
+        android:id="@+id/clr"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:src="@drawable/ic_home_white_24dp"  />
+  
+  <ImageView
+        android:id="@+id/ln2"
+        style="@style/line2"   />
+               
+  <ListView
+        android:id="@+id/sideIndex"
+        android:layout_width="fill_parent"
+        android:background="@color/gray"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+   </ListView>
+    
+  </LinearLayout> 
+  
+</LinearLayout>
+
+
+

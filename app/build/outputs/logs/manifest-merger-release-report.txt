@@ -1,0 +1,235 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:2:1-95:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\e0afd398f8960f3e80e0bafdaa18f6a9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\dd63e7e4c1c3efd1a779bf83288add36\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9e3db8c26ba76024bfee6979c6f17b3f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\dccf59e5b1e75c6cf5e754d249263737\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\d0d3616b292a19e21311e2604847d01a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\95ded6e58af40b702a9d298f27379a08\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\515baf33d8d9eb176c44d5663cc261a9\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4650fe604e835d883b74cae3d0b4039e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\124d08198d4f300945a99bf90b029ddc\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4cc377f0989c60a7a50ab8e39b7b2106\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:2:1-95:12
+	package
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:5:5-47
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:4:5-31
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:6:5-44
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:6:5-44
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:6:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\e0afd398f8960f3e80e0bafdaa18f6a9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\e0afd398f8960f3e80e0bafdaa18f6a9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\dd63e7e4c1c3efd1a779bf83288add36\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\dd63e7e4c1c3efd1a779bf83288add36\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9e3db8c26ba76024bfee6979c6f17b3f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9e3db8c26ba76024bfee6979c6f17b3f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\dccf59e5b1e75c6cf5e754d249263737\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\dccf59e5b1e75c6cf5e754d249263737\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\d0d3616b292a19e21311e2604847d01a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\d0d3616b292a19e21311e2604847d01a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\95ded6e58af40b702a9d298f27379a08\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\95ded6e58af40b702a9d298f27379a08\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\515baf33d8d9eb176c44d5663cc261a9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\515baf33d8d9eb176c44d5663cc261a9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4650fe604e835d883b74cae3d0b4039e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4650fe604e835d883b74cae3d0b4039e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\124d08198d4f300945a99bf90b029ddc\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\124d08198d4f300945a99bf90b029ddc\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4cc377f0989c60a7a50ab8e39b7b2106\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\paul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4cc377f0989c60a7a50ab8e39b7b2106\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:6:5-44
+INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:6:5-44
+	android:targetSdkVersion
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:6:5-44
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:6:15-41
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:8:22-63
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:11:22-73
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:12:22-77
+uses-permission#com.android.launcher.permission.INSTALL_SHORTCUT
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:13:5-88
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:13:22-85
+uses-permission#android.permission.READ_CALENDAR
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:14:5-72
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:14:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:16:5-73
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:16:22-70
+application
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:18:5-93:19
+	android:label
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:21:9-41
+	android:killAfterRestore
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:22:41-72
+	android:allowTaskReparenting
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:22:73-108
+	android:icon
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:20:9-45
+	android:allowBackup
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:19:9-35
+	android:theme
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:22:9-40
+activity#net.ossfree.launcher4.MainActivity
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:24:9-33:20
+	android:screenOrientation
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:28:13-49
+	android:label
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:26:13-45
+	android:launchMode
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:25:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:29:13-32:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:30:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:31:27-74
+activity#net.ossfree.launcher4.EditActivity
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:35:9-39:20
+	android:screenOrientation
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:38:13-49
+	android:label
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:37:13-56
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:36:13-41
+activity#net.ossfree.launcher4.AppsWindow
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:41:9-45:20
+	android:screenOrientation
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:44:13-49
+	android:label
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:43:13-48
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:42:13-39
+activity#net.ossfree.launcher4.DocWindow
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:47:9-51:20
+	android:screenOrientation
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:50:13-49
+	android:label
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:49:13-48
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:48:13-38
+activity#net.ossfree.launcher4.TabsList
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:53:9-60:20
+	android:screenOrientation
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:56:13-49
+	android:label
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:55:13-59
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:54:13-37
+intent-filter#action:name:android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:57:13-59:29
+action#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:58:17-87
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:58:25-84
+receiver#net.ossfree.launcher4.UpdateManager
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:62:9-75:20
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:62:19-48
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:63:13-65:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:64:17-79
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:64:25-76
+intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_CHANGED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:66:13-71:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:67:17-78
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:67:25-75
+action#android.intent.action.PACKAGE_CHANGED
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:68:17-80
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:68:25-77
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:69:17-80
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:69:25-77
+data
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:70:17-50
+	android:scheme
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:70:23-47
+intent-filter#action:name:net.ossfree.launcher4.LaunchApp
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:72:13-74:29
+action#net.ossfree.launcher4.LaunchApp
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:73:17-74
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:73:25-71
+receiver#net.ossfree.launcher4.WidgetProvider
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:76:9-87:20
+	android:label
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:79:13-57
+	android:icon
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:78:13-49
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:77:13-43
+intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:80:13-82:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:81:17-84
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:81:25-81
+meta-data#android.appwidget.provider
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:84:13-86:55
+	android:resource
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:86:17-52
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:85:17-58
+service#net.ossfree.launcher4.AppsService
+ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:89:9-91:38
+	android:enabled
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:91:13-35
+	android:name
+		ADDED from C:\Users\paul\Projects\android_launchpad_new1\app\src\main\AndroidManifest.xml:90:13-40

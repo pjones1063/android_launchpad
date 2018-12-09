@@ -1,0 +1,184 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
+        android:orderInCategory="100"
+        android:showAsAction="never" 
+        android:title="@string/action_addTab"/>
+  
+    
+    <item
+        android:id="@+id/action_rearrange"
+        android:icon="@drawable/ic_business_white_24dp"
+        android:orderInCategory="200"
+        android:showAsAction="never" 
+        android:title="@string/action_rearrange"/>
+       
+   
+   <item
+        android:id="@+id/item_view"
+        android:icon="@drawable/ic_action_view_as_grid"
+        android:orderInCategory="300"
+        android:showAsAction="never"         
+        android:title="@string/menu_view">
+   		<menu>
+   	     	<item 
+        		android:id="@+id/action_gridView"
+        		android:icon="@drawable/ic_action_view_as_grid"
+        		android:orderInCategory="310"
+        		android:showAsAction="never" 
+        		android:title="@string/action_grid"/>
+   	   		<item
+        		android:id="@+id/action_ListView"
+        		android:icon="@drawable/ic_action_view_as_list"
+        		android:orderInCategory="320"
+        		android:showAsAction="never"  
+        		android:title="@string/action_list"/>
+   		</menu>
+   </item>
+   
+   <item
+        android:id="@+id/doc_view"
+        android:icon="@drawable/ic_action_view_as_grid"
+        android:orderInCategory="300"
+        android:showAsAction="never"         
+        android:title="@string/menu_viewdoc">
+   		<menu>
+   	     	<item 
+        		android:id="@+id/action_gridViewDoc"
+        		android:icon="@drawable/ic_action_view_as_grid"
+        		android:orderInCategory="310"
+        		android:showAsAction="never" 
+        		android:title="@string/action_gridDoc"/>
+   	   		<item
+        		android:id="@+id/action_ListViewDoc"
+        		android:icon="@drawable/ic_action_view_as_list"
+        		android:orderInCategory="320"
+        		android:showAsAction="never"  
+        		android:title="@string/action_listDoc"/>
+   		</menu>
+   </item>
+   
+     <item
+        android:id="@+id/item_appname"
+        android:icon="@drawable/ic_action_expand"
+        android:orderInCategory="400"
+        android:showAsAction="never"         
+        android:title="@string/menu_appname">
+   		<menu>
+   	     	<item
+        		android:id="@+id/action_showappname"
+        		android:icon="@drawable/ic_action_labels"
+        		android:orderInCategory="410"
+        		android:showAsAction="never" 
+        		android:title="@string/action_showappname"/>
+   	   		<item
+        		android:id="@+id/action_hideappname"
+        		android:icon="@drawable/ic_action_cancel"
+        		android:orderInCategory="420"
+        		android:showAsAction="never" 
+        		android:title="@string/action_hideappname"/>
+   		</menu>
+   </item>
+   
+      <item
+        android:id="@+id/item_sort"
+        android:icon="@drawable/ic_compare_arrows_white_24dp"
+        android:orderInCategory="500"
+        android:showAsAction="never"         
+        android:title="@string/menu_sort">
+   		<menu>
+   	     	<item
+        		android:id="@+id/action_alphSort"
+        		android:icon="@drawable/ic_compare_arrows_white_24dp"
+        		android:orderInCategory="510"
+        		android:showAsAction="never" 
+        		android:title="@string/action_alphSort"/>
+   	   		<item
+        		android:id="@+id/action_dateSort"
+        		android:icon="@drawable/ic_compare_arrows_white_24dp"
+        		android:orderInCategory="520"
+        		android:showAsAction="never" 
+        		android:title="@string/action_dateSort"/>
+   	   		<item
+        		android:id="@+id/action_freqSort"
+        		android:icon="@drawable/ic_compare_arrows_white_24dp"
+        		android:orderInCategory="530"
+        		android:showAsAction="never" 
+        		android:title="@string/action_freqSort"/>
+   	   			   		
+   		</menu>
+   </item>
+   
+   <item
+        android:id="@+id/item_page"
+        android:orderInCategory="600"
+        android:icon="@drawable/ic_input_white_24dp"
+        android:showAsAction="never" 
+        android:title="@string/menu_page">
+   		<menu>
+  			 <item
+        		android:id="@+id/action_Flow"
+        		android:icon="@drawable/ic_input_white_24dp"
+        		android:orderInCategory="610"
+        		android:showAsAction="never" 
+        		android:title="@string/action_flow"/>	    
+   	    	<item
+        		android:id="@+id/action_Depth"
+        		android:icon="@drawable/ic_input_white_24dp"
+        		android:orderInCategory="620"
+        		android:showAsAction="never" 
+        		android:title="@string/action_depth"/>	 
+        	<item
+        		android:id="@+id/action_Zoom"
+        		android:icon="@drawable/ic_input_white_24dp"
+        		android:orderInCategory="630"
+        		android:showAsAction="never" 
+        		android:title="@string/action_zoom"/>	 
+        	<item
+        		android:id="@+id/action_Slide"
+        		android:icon="@drawable/ic_input_white_24dp"
+        		android:orderInCategory="640"
+        		android:showAsAction="never" 
+        		android:title="@string/action_slide"/>	 
+   		</menu>
+   </item>
+   
+   <item
+        android:id="@+id/action_clearfreqs"
+        android:icon="@drawable/ic_action_delete"
+        android:orderInCategory="700"
+        android:showAsAction="never"
+        android:title="@string/action_clearfreqs"/>
+
+	<item
+		android:id="@+id/action_sdpath"
+		android:icon="@drawable/ic_mode_edit_white_24dp"
+		android:orderInCategory="800"
+		android:showAsAction="never"
+		android:title="@string/action_sdPath"/>
+
+   <!-- item
+        android:id="@+id/action_catallapps"
+        android:icon="@drawable/ic_action_refresh"
+        android:orderInCategory="900"
+        android:showAsAction="never"
+        android:title="@string/action_categorize"/
+	-->
+
+    <item
+        android:id="@+id/action_cancel"
+        android:icon="@drawable/ic_action_cancel"
+        android:orderInCategory="1000"
+        android:showAsAction="never"
+        android:title="@string/action_cancel"/>
+      
+   
+    <item android:id="@+id/action_search"
+          android:title="@string/action_search"
+          android:icon="@android:drawable/menu_full_frame"
+          android:showAsAction="ifRoom"
+          android:actionViewClass="android.widget.SearchView" />
+        
+</menu>

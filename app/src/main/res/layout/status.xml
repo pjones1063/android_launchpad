@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"  android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/textDate1"
+        style="@style/txBoxC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textDate1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_action_refresh" />
+
+    <android.widget.TextClock
+        android:id="@+id/textClock1"
+        style="@style/txBoxC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textDate1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/infolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textClock1">
+
+        <!-- location -->
+        <TextView
+            android:id="@+id/location"
+            style="@style/txBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+
+        <!-- network -->
+        <TextView
+            android:id="@+id/network"
+            style="@style/txBox2"
+            android:layout_below="@id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+        <!-- Up Times -->
+        <TextView
+            android:id="@+id/uptime"
+            style="@style/txBox2"
+            android:layout_below="@id/network" />
+
+        <!-- Up Times -->
+        <TextView
+            android:id="@+id/ip"
+            style="@style/txBox2"
+            android:layout_below="@+id/uptime" />
+
+        <ImageView
+            android:id="@+id/lne3"
+            style="@style/line1"
+            android:layout_below="@+id/ip" />
+
+        <!--  Battery  -->
+        <TextView
+            android:id="@+id/batDat1"
+            style="@style/txBox1"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lne3" />
+
+        <TextView
+            android:id="@+id/batDat2"
+            style="@style/txBox1"
+            android:layout_below="@+id/ip"
+            android:layout_toEndOf="@+id/batDat1" />
+
+        <TextView
+            android:id="@+id/batDat3"
+            style="@style/txBox1"
+            android:layout_below="@+id/ip"
+            android:layout_toEndOf="@+id/batDat2" />
+
+        <TextView
+            android:id="@+id/batSt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/batDat1"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/snow" />
+
+        <ImageView
+            android:id="@+id/batWPB"
+            style="@style/wPbBar1"
+            android:layout_below="@+id/batSt" />
+
+        <ImageView
+            android:id="@+id/ln2"
+            style="@style/line1"
+            android:layout_below="@+id/batWPB"
+            android:paddingTop="80dp" />
+
+        <!--  Free Memory -->
+        <TextView
+            android:id="@+id/freeM1"
+            style="@style/txBox1"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ln2" />
+
+        <TextView
+            android:id="@+id/freeM2"
+            style="@style/txBox1"
+            android:layout_below="@+id/ln2"
+            android:layout_toEndOf="@+id/freeM1" />
+
+        <TextView
+            android:id="@+id/freeM3"
+            style="@style/txBox1"
+            android:layout_below="@+id/ln2"
+            android:layout_toEndOf="@+id/freeM2" />
+
+        <ImageView
+            android:id="@+id/freeMwpb"
+            style="@style/wPbBar1"
+            android:layout_below="@+id/freeM1" />
+
+        <!--  SD Card  -->
+        <TextView
+            android:id="@+id/freeSD1"
+            style="@style/txBox1"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/freeMwpb" />
+
+        <TextView
+            android:id="@+id/freeSD2"
+            style="@style/txBox1"
+            android:layout_below="@+id/freeMwpb"
+            android:layout_toEndOf="@+id/freeSD1" />
+
+        <TextView
+            android:id="@+id/freeSD3"
+            style="@style/txBox1"
+            android:layout_below="@+id/freeMwpb"
+            android:layout_toEndOf="@+id/freeSD2" />
+
+        <TextView
+            android:id="@+id/freeSD4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/freeSD3"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/lightgreen" />
+
+        <ImageView
+            android:id="@+id/freeSDwpb"
+            style="@style/wPbBar1"
+            android:layout_below="@+id/freeSD4" />
+
+
+        <!--  Internal Card   -->
+        <TextView
+            android:id="@+id/freeIT1"
+            style="@style/txBox1"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/freeSDwpb" />
+
+        <TextView
+            android:id="@+id/freeIT2"
+            style="@style/txBox1"
+            android:layout_below="@+id/freeSDwpb"
+            android:layout_toEndOf="@+id/freeIT1" />
+
+        <TextView
+            android:id="@+id/freeIT3"
+            style="@style/txBox1"
+            android:layout_below="@+id/freeSDwpb"
+            android:layout_toEndOf="@+id/freeIT2" />
+
+        <TextView
+            android:id="@+id/freeIT4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/freeIT3"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/lightgreen" />
+
+        <ImageView
+            android:id="@+id/freeITwpb"
+            style="@style/wPbBar1"
+            android:layout_below="@+id/freeIT4" />
+
+        <ImageView
+            android:id="@+id/lne"
+            style="@style/line1"
+            android:layout_below="@+id/freeITwpb" />
+
+
+    </RelativeLayout>
+
+    <!--
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/infolayout"/>
+    -->
+
+</RelativeLayout>
