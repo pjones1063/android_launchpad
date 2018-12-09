@@ -30,6 +30,7 @@ import net.ossfree.launcher4.Structures.TabPage;
 
 import java.util.List;
 
+
 @SuppressLint({"DefaultLocale", "ValidFragment"})
 public class DocList<E> extends AppsList   {
 
